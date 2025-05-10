@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    justify-content: center;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+header span {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: #444;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0.5rem;
+    gap: 1rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: #666;
+    border-radius: 4px;
+}
+
+main {
+    background-color: #666;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+main h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.sections-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.sections-row section {
+    flex: 1 1 48%;
+    background-color: white;
+    padding: 1rem;
+    border-left: 4px solid #333;
+}
+
+.sections-row section img {
+    width: 100%;
+}
+
+.full-width {
+    display: flex;
+    background-color: white;
+    padding: 1rem;
+    border-left: 4px solid #333;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+#courses-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.course-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.course-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.course-card .technologies {
+    font-weight: bold;
+    color: #1abc9c;
+}
+
+.course-card .completed {
+    color: green;
+    font-weight: bold;
+}
+
+#filters {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#filters button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #1abc9c;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#filters button:hover {
+    background-color: #16a085;
+}
+
+
+@media (max-width: 600px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .sections-row {
+        flex-direction: column;
+    }
+
+    .sections-row section {
+        flex: 1 1 100%;
+    }
+}
