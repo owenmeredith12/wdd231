@@ -113,10 +113,12 @@ function displayCourses(subjectFilter = 'All') {
     });
 }
 
+//testing
 
 function filterCourses(subject) {
     displayCourses(subject);
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     displayCourses();
