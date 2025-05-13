@@ -142,12 +142,12 @@ footer {
     font-weight: bold;
 }
 
-#filters {
+#filter-buttons {
     margin-bottom: 1rem;
     text-align: center;
 }
 
-#filters button {
+#filter-buttons button {
     margin: 0 0.5rem;
     padding: 0.5rem 1rem;
     border: none;
@@ -158,7 +158,7 @@ footer {
     font-size: 1rem;
 }
 
-#filters button:hover {
+#filter-buttons button:hover {
     background-color: #16a085;
 }
 

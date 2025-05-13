@@ -79,11 +79,15 @@ const courses = [
 ];
 
 
-function displayCourses() {
+function displayCourses(subjectFilter = 'All') {
     const coursesList = document.getElementById('courses-list');
+    coursesList.innerHTML = '';
 
-    courses.forEach(course => {
+    const filteredCourses = subjectFilter === 'All'
+        ? courses
+        : courses.filter(course => course.subject === subjectFilter);
 
+    filteredCourses.forEach(course => {
         const courseCard = document.createElement('div');
         courseCard.classList.add('course-card');
 
@@ -91,27 +95,29 @@ function displayCourses() {
         courseTitle.textContent = `${course.subject} ${course.number}: ${course.title}`;
         courseCard.appendChild(courseTitle);
 
-
         const courseDescription = document.createElement('p');
         courseDescription.textContent = course.description;
         courseCard.appendChild(courseDescription);
-
 
         const techList = document.createElement('p');
         techList.classList.add('technologies');
         techList.textContent = `Technologies: ${course.technology.join(', ')}`;
         courseCard.appendChild(techList);
 
-
         const completionStatus = document.createElement('p');
         completionStatus.classList.add(course.completed ? 'completed' : 'in-progress');
         completionStatus.textContent = course.completed ? 'Completed' : 'In Progress';
         courseCard.appendChild(completionStatus);
-
 
         coursesList.appendChild(courseCard);
     });
 }
 
 
-document.addEventListener('DOMContentLoaded', displayCourses);
+function filterCourses(subject) {
+    displayCourses(subject);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    displayCourses();
+});
