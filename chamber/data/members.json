@@ -1,0 +1,68 @@
+{
+    "companies": [
+        {
+            "name": "Sahara Solutions",
+            "address": "123 Dune Lane, Timbuktu, Mali",
+            "phone": "+223 700-1234",
+            "website": "https://saharasolutions.ml",
+            "image": "images/sahara.jpg",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Sahara Solutions",
+            "address": "123 Dune Lane, Timbuktu, Mali",
+            "phone": "+223 700-1234",
+            "website": "https://saharasolutions.ml",
+            "image": "images/sahara.jpg",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Sahara Solutions",
+            "address": "123 Dune Lane, Timbuktu, Mali",
+            "phone": "+223 700-1234",
+            "website": "https://saharasolutions.ml",
+            "image": "images/sahara.jpg",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Sahara Solutions",
+            "address": "123 Dune Lane, Timbuktu, Mali",
+            "phone": "+223 700-1234",
+            "website": "https://saharasolutions.ml",
+            "image": "images/sahara.jpg",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Sahara Solutions",
+            "address": "123 Dune Lane, Timbuktu, Mali",
+            "phone": "+223 700-1234",
+            "website": "https://saharasolutions.ml",
+            "image": "images/sahara.jpg",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Sahara Solutions",
+            "address": "123 Dune Lane, Timbuktu, Mali",
+            "phone": "+223 700-1234",
+            "website": "https://saharasolutions.ml",
+            "image": "images/sahara.jpg",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Sahara Solutions",
+            "address": "123 Dune Lane, Timbuktu, Mali",
+            "phone": "+223 700-1234",
+            "website": "https://saharasolutions.ml",
+            "image": "images/sahara.jpg",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Sahara Solutions",
+            "address": "123 Dune Lane, Timbuktu, Mali",
+            "phone": "+223 700-1234",
+            "website": "https://saharasolutions.ml",
+            "image": "images/sahara.jpg",
+            "membershipLevel": 3
+        }
+    ]
+}
