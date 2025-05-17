@@ -22,12 +22,15 @@ header nav a {
 
 .hero {
     background-color: #ccc;
-    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     text-align: center;
+}
+
+.hero img {
+    width: 25%;
 }
 
 .hero button {
