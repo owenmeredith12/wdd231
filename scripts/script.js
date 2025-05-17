@@ -109,6 +109,11 @@ function displayCourses(subjectFilter = 'All') {
         completionStatus.textContent = course.completed ? 'Completed' : 'In Progress';
         courseCard.appendChild(completionStatus);
 
+
+        const credits = document.createElement('p');
+        credits.textContent = `${course.credits} credits`;
+        courseCard.appendChild(credits);
+
         coursesList.appendChild(courseCard);
     });
 }
