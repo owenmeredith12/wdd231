@@ -40,31 +40,53 @@
 
 
     <main>
-        <h1>WDD - Chamber Directory Page - Owen Meredtih</h1>
+        <h1><a href="#">Make sure to check out our Directory!!!</a></h1>
         <section>
             <article>
-                <h2>Events</h2>
+                <h2>Current Events</h2>
+                <p>Jun 1. - Park Concert</p>
+                <p>Jun 1. - Park Concert</p>
+                <p>Jun 1. - Park Concert</p>
             </article>
+
             <article>
                 <h2>Current Weather</h2>
-                <p><strong>75°F</strong></p>
-                <p>Partly Cloudy<br>High: 85°<br>Low: 52°<br>Humidity: 34%<br>Sunrise: 7:30am<br>Sunset: 9:59pm</p>
+                <p>The temperature in Provo, Utah is <br>
+                    <span id="current-temp"></span>
+                </p>
+                <figure>
+                    <img id="weather-icon" src="" alt="">
+                    <figcaption></figcaption>
+                </figure>
             </article>
+
             <article>
                 <h2>Weather Forecast</h2>
-                <p>Today: <strong>90°F</strong></p>
-                <p>Wednesday: <strong>89°F</strong></p>
-                <p>Thursday: <strong>68°F</strong></p>
+                <p id="day1"></p>
+                <p id="day2"></p>
+                <p id="day3">Day after Tomorrow: <strong><span id="day-after"></span>°F</strong></p>
             </article>
         </section>
-        <div class="buttons">
-            <button onClick="setView('grid')">Grid</button>
-            <button onClick="setView('list')">List</button>
-        </div>
-        <div id="cards" class="main">
-            <section>
-            </section>
-        </div>
+
+        <section class="spotlight">
+            <h2>Company Spotlight</h2>
+            <div class="spotlight-articles">
+                <article id="company1">
+                    <!-- <h2>Something LLC</h2>
+                    <p>They are great at providing such and such service</p> -->
+                </article>
+
+                <article id="company2">
+                    <!-- <h2>Something LLC</h2>
+                    <p>They are great at providing such and such service</p> -->
+                </article>
+
+                <article id="company3">
+                    <!-- <h2>Something LLC</h2>
+                    <p>They are great at providing such and such service</p> -->
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer>
