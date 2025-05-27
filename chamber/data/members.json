@@ -6,7 +6,7 @@
             "phone": "+223 700-1234",
             "website": "https://saharasolutions.ml",
             "image": "images/sahara.jpg",
-            "membershipLevel": 3
+            "membershipLevel": 2
         },
         {
             "name": "Something or Other",
@@ -22,7 +22,7 @@
             "phone": "+223 700-1234",
             "website": "https://saharasolutions.ml",
             "image": "images/sahara.jpg",
-            "membershipLevel": 3
+            "membershipLevel": 1
         },
         {
             "name": "Cool Cats",
@@ -30,7 +30,7 @@
             "phone": "+223 700-1234",
             "website": "https://saharasolutions.ml",
             "image": "images/sahara.jpg",
-            "membershipLevel": 3
+            "membershipLevel": 1
         },
         {
             "name": "Daves Book Store",
@@ -46,7 +46,7 @@
             "phone": "+223 700-1234",
             "website": "https://saharasolutions.ml",
             "image": "images/sahara.jpg",
-            "membershipLevel": 3
+            "membershipLevel": 1
         },
         {
             "name": "Keyboard Kings",
@@ -62,7 +62,7 @@
             "phone": "+223 700-1234",
             "website": "https://saharasolutions.ml",
             "image": "images/sahara.jpg",
-            "membershipLevel": 3
+            "membershipLevel": 1
         }
     ]
 }

@@ -142,10 +142,14 @@ function displayForecast(data) {
 const spotlightCards = document.querySelector('#spotlight-articles');
 
 const displaySpotlight = (data) => {
+    const validCompanies = data.companies.filter(company => company.membershipLevel >= 2);
+    
+    const shuffled = validCompanies.sort(() => 0.5 - Math.random());
 
-    for (let i = 1; i < 4; i++) {
-        const random1 = Math.floor(Math.random() * 8);
-        const card = document.querySelector(`#company${i}`);
+    const spotlightCompanies = shuffled.slice(0, 3);
+
+    spotlightCompanies.forEach((company, index) => {
+        const card = document.querySelector(`#company${index + 1}`);
         const title = document.createElement('h2');
         const picture = document.createElement('img');
         const phone = document.createElement('p');
@@ -153,16 +157,15 @@ const displaySpotlight = (data) => {
         const website = document.createElement('p');
         const membership = document.createElement('p');
 
-        bname = data.companies[random1].name
-        title.innerHTML = `${bname}`;
-        picture.setAttribute('src', data.companies[random1].image);
-        picture.setAttribute('alt', `Picture of business`);
+        title.innerHTML = company.name;
+        picture.setAttribute('src', company.image);
+        picture.setAttribute('alt', `Picture of business ${company.name}`);
         picture.setAttribute('loading', 'lazy');
         picture.setAttribute('width', '30%');
-        phone.innerHTML = `${data.companies[random1].phone}`
-        address.innerHTML = `${data.companies[random1].address}`
-        website.innerHTML = `${data.companies[random1].website}`
-        membership.innerHTML = `${data.companies[random1].membershipLevel}`
+        phone.textContent = company.phone;
+        address.textContent = company.address;
+        website.innerHTML = `<a href="${company.website}" target="_blank">${company.website}</a>`;
+        membership.textContent = `Membership Level: ${company.membershipLevel}`;
 
         card.appendChild(title);
         card.appendChild(picture);
@@ -170,10 +173,8 @@ const displaySpotlight = (data) => {
         card.appendChild(address);
         card.appendChild(website);
         card.appendChild(membership);
-
-    }
+    });
 }
-
 
 async function fetchSpotlight() {
     const response = await fetch("data/members.json");
