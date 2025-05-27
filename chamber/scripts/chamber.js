@@ -1,9 +1,21 @@
-const cards = document.querySelector('#cards');
+
+async function fetchData() {
+    const cardsContainer = document.querySelector("#cards");
+    if (!cardsContainer) return;
+
+    const response = await fetch("data/members.json");
+    const data = await response.json();
+    displayData(data.companies);
+}
 
 const displayData = (companies) => {
+    const cards = document.querySelector('#cards');
+    if (!cards) return;
+
     companies.forEach((business) => {
         let card = document.createElement('section');
-        card.classList.add("js-cards")
+        card.classList.add("js-cards");
+
         let fullName = document.createElement('h3');
         let picture = document.createElement('img');
 
@@ -16,38 +28,31 @@ const displayData = (companies) => {
 
         card.appendChild(fullName);
         card.appendChild(picture);
-
         cards.appendChild(card);
-
     });
-}
+};
 
-async function fetchData() {
-    const response = await fetch("data/members.json");
-    const data = await response.json();
-    displayData(data.companies);
-}
 
 document.addEventListener("DOMContentLoaded", () => {
     const modified = document.getElementById("lastModified");
     if (modified) {
         modified.textContent = "Last modified: " + document.lastModified;
     }
+    fetchData();
 });
 
 function setView(view) {
     const container = document.getElementById("cards");
+    if (!container) return;
+
     if (view === 'grid') {
-        container.classList.remove('list-view')
-        container.classList.add('grid-view')
+        container.classList.remove('list-view');
+        container.classList.add('grid-view');
+    } else if (view === 'list') {
+        container.classList.add('list-view');
+        container.classList.remove('grid-view');
     }
-    else if (view === 'list') {
-        container.classList.add('list-view')
-        container.classList.remove('grid-view')
-    }
-
 }
-
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
@@ -115,10 +120,11 @@ function getDays() {
 
 function displayCurrentWeather(data) {
     currentTemp.innerHTML = `${data.main.temp}&deg;F`;
-    const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+    const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     let desc = data.weather[0].description;
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', desc);
+    // weatherIcon.setAttribute('width', '75%');
     captionDesc.textContent = `${desc}`;
 }
 
@@ -144,7 +150,7 @@ const displaySpotlight = (data) => {
         const picture = document.createElement('img');
         const phone = document.createElement('p');
         const address = document.createElement('p');
-        const website = document.createElement('a');
+        const website = document.createElement('p');
         const membership = document.createElement('p');
 
         bname = data.companies[random1].name
@@ -152,7 +158,7 @@ const displaySpotlight = (data) => {
         picture.setAttribute('src', data.companies[random1].image);
         picture.setAttribute('alt', `Picture of business`);
         picture.setAttribute('loading', 'lazy');
-        picture.setAttribute('width', '20%');
+        picture.setAttribute('width', '30%');
         phone.innerHTML = `${data.companies[random1].phone}`
         address.innerHTML = `${data.companies[random1].address}`
         website.innerHTML = `${data.companies[random1].website}`
@@ -184,4 +190,3 @@ document.addEventListener('DOMContentLoaded', () => {
 fetchSpotlight();
 fetchCurrentWeather(url);
 fetchForecastWeather(forecasturl);
-fetchData();
