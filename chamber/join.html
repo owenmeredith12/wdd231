@@ -41,37 +41,37 @@
 
     <main>
         <form method="get" action="thankyou.html">
-            <!-- First Name -->
+
             <label for="firstName">First Name</label>
             <input type="text" id="firstName" name="firstName" required title="Enter your first name"
                 autocomplete="given-name">
 
-            <!-- Last Name -->
+
             <label for="lastName">Last Name</label>
             <input type="text" id="lastName" name="lastName" required title="Enter your last name"
                 autocomplete="family-name">
 
-            <!-- Organizational Title -->
+
             <label for="orgTitle">Organizational Title</label>
             <input type="text" id="orgTitle" name="orgTitle" title="Enter your title within the organization"
                 autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
 
-            <!-- Email Address -->
+
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required title="Enter your email address" autocomplete="email"
                 placeholder="example@example.com">
 
-            <!-- Mobile Phone Number -->
+
             <label for="phone">Mobile Phone</label>
             <input type="tel" id="phone" name="phone" required title="Enter your mobile phone number"
                 autocomplete="tel">
 
-            <!-- Organization Name -->
+
             <label for="organization">Organization Name</label>
             <input type="text" id="organization" name="organization" required title="Enter your organization name"
                 autocomplete="organization">
 
-            <!-- Membership Level -->
+
             <label for="membership">Membership Level</label>
             <select id="membership" name="membership" title="Select a membership level">
                 <option value="np">NP Membership (Free)</option>
@@ -80,16 +80,52 @@
                 <option value="gold">Gold Membership</option>
             </select>
 
-            <!-- Organization Description -->
+
             <label for="description">Organization Description</label>
             <textarea id="description" name="description" title="Describe your organization"></textarea>
 
-            <!-- Hidden Timestamp -->
+
             <input type="hidden" name="timestamp" id="timestamp">
 
-            <!-- Submit Button -->
+
             <input type="submit" value="Submit Membership Request">
         </form>
+
+
+        <button class="modal-btn" data-modal="goldModal">Gold Tier</button>
+        <div id="goldModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Gold Tier Benefits: Priority support, spotlight homepage feature, exclusive events, and more.</p>
+            </div>
+        </div>
+
+
+        <button class="modal-btn" data-modal="silverModal">Silver Tier</button>
+        <div id="silverModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Silver Tier Benefits: Advertising credits, event discounts, early registration access.</p>
+            </div>
+        </div>
+
+        <button class="modal-btn" data-modal="bronzeModal">Bronze Tier</button>
+        <div id="bronzeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Bronze Tier Benefits: Access to networking events and directory listings.</p>
+            </div>
+        </div>
+
+
+        <button class="modal-btn" data-modal="npModal">NonProfit</button>
+        <div id="npModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>NP Tier Benefits: Free basic listing and newsletter mentions for non-profits.</p>
+            </div>
+        </div>
+
 
     </main>
 
