@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Owen Meredith - WDD231 - Chamber directories page">
+    <meta name="author" content="Owen Meredith">
+    <meta property="og:title" content="Chambers Directory Page" />
+    <meta property="og:description" content="A directories page for chamber" />
+    <meta property="og:image" content="https://owenmeredith12.github.io/wdd231/chamber/images/chamber.webp" />
+    <meta property="og:url" content="https://owenmeredith12.github.io/wdd231/chamber/index.html" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>WDD231 - Chamber Directory Page - Owen Meredith</title>
+    <script src="scripts/chamber.js" defer></script>
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Boldonse&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div><strong>Provo</strong><br>Chamber of Commerce</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="#">Join</a>
+            <a href="#">Discover</a>
+            <span>◐</span>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <img src="images/chamber.jpg" alt="chamber of commerce building">
+    </div>
+
+
+
+    <main>
+        <form method="get" action="thankyou.html">
+            <!-- First Name -->
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required title="Enter your first name"
+                autocomplete="given-name">
+
+            <!-- Last Name -->
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required title="Enter your last name"
+                autocomplete="family-name">
+
+            <!-- Organizational Title -->
+            <label for="orgTitle">Organizational Title</label>
+            <input type="text" id="orgTitle" name="orgTitle" title="Enter your title within the organization"
+                autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+
+            <!-- Email Address -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required title="Enter your email address" autocomplete="email"
+                placeholder="example@example.com">
+
+            <!-- Mobile Phone Number -->
+            <label for="phone">Mobile Phone</label>
+            <input type="tel" id="phone" name="phone" required title="Enter your mobile phone number"
+                autocomplete="tel">
+
+            <!-- Organization Name -->
+            <label for="organization">Organization Name</label>
+            <input type="text" id="organization" name="organization" required title="Enter your organization name"
+                autocomplete="organization">
+
+            <!-- Membership Level -->
+            <label for="membership">Membership Level</label>
+            <select id="membership" name="membership" title="Select a membership level">
+                <option value="np">NP Membership (Free)</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+            </select>
+
+            <!-- Organization Description -->
+            <label for="description">Organization Description</label>
+            <textarea id="description" name="description" title="Describe your organization"></textarea>
+
+            <!-- Hidden Timestamp -->
+            <input type="hidden" name="timestamp" id="timestamp">
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit Membership Request">
+        </form>
+
+    </main>
+
+
+    <footer>
+        <p><strong>Provo Chamber of Commerce</strong><br>
+            <img src="images/facebook.webp" alt="Facebook">
+            <img src="images/twitter.webp" alt="Twitter">
+            <img src="images/instagram.webp" alt="Instagram">
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

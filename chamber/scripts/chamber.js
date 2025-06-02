@@ -69,7 +69,6 @@ async function fetchCurrentWeather(url) {
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
             displayCurrentWeather(data);
         }
 
@@ -89,7 +88,6 @@ async function fetchForecastWeather(url) {
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
             displayForecast(data);
         }
 
@@ -143,7 +141,7 @@ const spotlightCards = document.querySelector('#spotlight-articles');
 
 const displaySpotlight = (data) => {
     const validCompanies = data.companies.filter(company => company.membershipLevel >= 2);
-    
+
     const shuffled = validCompanies.sort(() => 0.5 - Math.random());
 
     const spotlightCompanies = shuffled.slice(0, 3);
