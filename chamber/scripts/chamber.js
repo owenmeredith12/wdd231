@@ -217,6 +217,73 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('data/pois.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(cardsData => {
+            const container = document.getElementById('poi-cards');
+
+            cardsData.forEach((card, index) => {
+                const cardDiv = document.createElement('div');
+                cardDiv.classList.add('card', `${index + 1}`);
+
+                const title = document.createElement('h2');
+                title.textContent = card.title;
+
+                const figure = document.createElement('figure');
+                const img = document.createElement('img');
+                img.src = card.image;
+                img.alt = card.title;
+                figure.appendChild(img);
+
+                const address = document.createElement('address');
+                address.textContent = card.address;
+
+                const description = document.createElement('p');
+                description.textContent = card.description;
+
+                const button = document.createElement('button');
+                button.textContent = "Learn More";
+
+                cardDiv.appendChild(title);
+                cardDiv.appendChild(figure);
+                cardDiv.appendChild(address);
+                cardDiv.appendChild(description);
+                cardDiv.appendChild(button);
+
+                container.appendChild(cardDiv);
+            });
+        })
+        .catch(error => console.error('Error fetching JSON data:', error));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sidebar = document.getElementById('sidebar-message');
+  const lastVisit = localStorage.getItem('lastVisit');
+  const now = new Date();
+
+  if (!lastVisit) {
+    sidebar.textContent = "Welcome! Let us know if you have any questions.";
+  } else {
+    const lastVisitDate = new Date(lastVisit);
+    const diffTime = now - lastVisitDate;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays < 1) {
+      sidebar.textContent = "Back so soon! Awesome!";
+    } else {
+      sidebar.textContent = `You last visited ${diffDays} day${diffDays === 1 ? '' : 's'} ago.`;
+    }
+  }
+
+  localStorage.setItem('lastVisit', now.toISOString());
+});
+
 
 
 fetchSpotlight();
