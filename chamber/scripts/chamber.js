@@ -263,25 +263,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const sidebar = document.getElementById('sidebar-message');
-  const lastVisit = localStorage.getItem('lastVisit');
-  const now = new Date();
+    const sidebar = document.getElementById('sidebar-message');
+    const lastVisit = localStorage.getItem('lastVisit');
+    const now = new Date();
 
-  if (!lastVisit) {
-    sidebar.textContent = "Welcome! Let us know if you have any questions.";
-  } else {
-    const lastVisitDate = new Date(lastVisit);
-    const diffTime = now - lastVisitDate;
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
-    if (diffDays < 1) {
-      sidebar.textContent = "Back so soon! Awesome!";
+    if (!lastVisit) {
+        sidebar.textContent = "Welcome! Let us know if you have any questions.";
     } else {
-      sidebar.textContent = `You last visited ${diffDays} day${diffDays === 1 ? '' : 's'} ago.`;
-    }
-  }
+        const lastVisitDate = new Date(lastVisit);
+        const diffTime = now - lastVisitDate;
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
-  localStorage.setItem('lastVisit', now.toISOString());
+        if (diffDays < 1) {
+            sidebar.textContent = "Back so soon! Awesome!";
+        } else {
+            sidebar.textContent = `You last visited ${diffDays} day${diffDays === 1 ? '' : 's'} ago.`;
+        }
+    }
+
+    localStorage.setItem('lastVisit', now.toISOString());
 });
 
 

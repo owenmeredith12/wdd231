@@ -114,7 +114,7 @@ main {
     height: auto;
 }
 
-/* Hover effect applied only on devices that support hover */
+
 @media (min-width:640px) {
     #poi-cards figure:hover {
         transform: scale(1.05);
