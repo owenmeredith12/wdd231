@@ -1,0 +1,92 @@
+[
+  {
+    "title": "IT Support Technician",
+    "company": "Provo Tech Services",
+    "location": "Provo, UT",
+    "description": "Provide desktop support for local businesses."
+  },
+  {
+    "title": "Junior Web Developer",
+    "company": "Orem Web Studio",
+    "location": "Orem, UT",
+    "description": "Build and maintain small business websites."
+  },
+  {
+    "title": "Network Administrator",
+    "company": "UVU",
+    "location": "Orem, UT",
+    "description": "Manage campus-wide network infrastructure."
+  },
+  {
+    "title": "Data Analyst Intern",
+    "company": "Lehi Analytics",
+    "location": "Lehi, UT",
+    "description": "Work with large data sets to uncover insights."
+  },
+  {
+    "title": "Cybersecurity Assistant",
+    "company": "Brigham Security",
+    "location": "Springville, UT",
+    "description": "Monitor and maintain security protocols."
+  },
+  {
+    "title": "Frontend Developer",
+    "company": "Saratoga Software",
+    "location": "Saratoga Springs, UT",
+    "description": "Develop and optimize UI components."
+  },
+  {
+    "title": "Tech Support Rep",
+    "company": "HelpDesk Now",
+    "location": "American Fork, UT",
+    "description": "Assist customers with product issues."
+  },
+  {
+    "title": "Backend Developer",
+    "company": "CloudCore Systems",
+    "location": "Lehi, UT",
+    "description": "Create REST APIs and server logic."
+  },
+  {
+    "title": "IT Helpdesk Intern",
+    "company": "Pleasant Grove City",
+    "location": "Pleasant Grove, UT",
+    "description": "Assist with city department tech needs."
+  },
+  {
+    "title": "WordPress Developer",
+    "company": "BYU Web Team",
+    "location": "Provo, UT",
+    "description": "Build custom themes and plugins."
+  },
+  {
+    "title": "Database Technician",
+    "company": "Utah Valley Hospital",
+    "location": "Provo, UT",
+    "description": "Maintain and troubleshoot database systems."
+  },
+  {
+    "title": "Systems Analyst",
+    "company": "County IT Department",
+    "location": "Spanish Fork, UT",
+    "description": "Analyze and improve internal systems."
+  },
+  {
+    "title": "QA Tester",
+    "company": "Lehi Softworks",
+    "location": "Lehi, UT",
+    "description": "Test new software releases before launch."
+  },
+  {
+    "title": "Tech Intern",
+    "company": "Eagle Mountain High School",
+    "location": "Eagle Mountain, UT",
+    "description": "Assist with classroom tech setup and maintenance."
+  },
+  {
+    "title": "DevOps Assistant",
+    "company": "Startup Launchpad",
+    "location": "Provo, UT",
+    "description": "Help automate deployment workflows."
+  }
+]
